@@ -16,4 +16,6 @@ runs:
     - ${{ inputs.host }}
     - -Format 
     - json
+    - -o
+    - results.json
 
