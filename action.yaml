@@ -1,0 +1,17 @@
+# action.yml
+name: 'nikto-scan'
+description: 'Perform a web application scan on an endpoint, optionally authenticated'
+inputs:
+  host:
+    description: 'The endpoint that will be scanned '
+    required: true
+outputs:
+  results: # id of output
+    description: 'Scan results in JSON format'
+runs:
+  using: 'docker'
+  image: 'docker://heywoodlh/nikto'
+  args:
+    - -h ${{ inputs.host }}
+    - -Format json
+
