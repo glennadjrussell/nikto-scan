@@ -12,6 +12,8 @@ runs:
   using: 'docker'
   image: 'docker://heywoodlh/nikto'
   args:
-    - -h ${{ inputs.host }}
-    - -Format json
+    - -h
+    - ${{ inputs.host }}
+    - -Format 
+    - json
 
