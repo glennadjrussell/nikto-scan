@@ -17,5 +17,5 @@ runs:
     - -Format 
     - json
     - -o
-    - results.json
+    - /tmp/results.json
 
