@@ -5,6 +5,10 @@ inputs:
   host:
     description: 'The endpoint that will be scanned '
     required: true
+  format:
+    description: 'The file output format to generate'
+    required: false
+    default: 'xml'
 outputs:
   results: # id of output
     description: 'Scan results in JSON format'
@@ -14,8 +18,6 @@ runs:
   args:
     - -h
     - ${{ inputs.host }}
-    - -Format 
-    - json
     - -o
-    - /tmp/results.json
+    - /tmp/results.${{ inputs.format }}
 
