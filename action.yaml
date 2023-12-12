@@ -18,8 +18,6 @@ runs:
   args:
     - -h
     - ${{ inputs.host }}
-    - -Pause
-    - 1 
     - -Display
     - V
     - -o
